@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Lovely Ayu Ristayanti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+      .heart-float {
+        animation: float 4s ease-in-out infinite;
+      }
+      .message-card {
+        transition: all 0.3s ease;
+        transform-style: preserve-3d;
+      }
+      .message-card:hover {
+        transform: rotateY(10deg) scale(1.03);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .hidden-message {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      .love-btn:hover + .hidden-message {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-pink-50 to-purple-50 min-h-screen font-sans"
+  >
+    <div class="container mx-auto px-4 py-12">
+      <!-- Header Section -->
+      <header class="text-center mb-12">
+        <div class="relative inline-block mb-6">
+          <img
+            src="iamge1.jpg"
+            alt="Foto istimewa Ayu Ristayanti dengan senyuman manis dan tatapan penuh kasih"
+            class="rounded-full h-40 w-40 object-cover mx-auto border-4 border-white shadow-lg"
+          />
+          <div
+            class="absolute -bottom-2 -right-2 bg-pink-500 text-white rounded-full p-2 shadow-md"
+          >
+            <i class="fas fa-heart text-2xl"></i>
+          </div>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-pink-600 mb-2">
+          Ayu RistaYanti
+        </h1>
+        <p class="text-lg text-gray-600">
+          My Sunshine, My Happiness, My Everything
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Message Cards (3 buah) -->
+        <div
+          class="message-card bg-white rounded-2xl p-6 shadow-md relative overflow-hidden"
+        >
+          <div
+            class="absolute -top-4 -right-4 text-pink-400 text-5xl opacity-20"
+          >
+            <i class="fas fa-heart"></i>
+          </div>
+          <h2 class="text-xl font-semibold text-pink-600 mb-3">
+            My Sweet Morning
+          </h2>
+          <p class="text-gray-700 mb-4">
+            Setiap pagi yang kulewati bersamamu adalah anugerah. Senyummu
+            mengisi hari-hariku dengan keceriaan dan kehangatan.
+          </p>
+          <div class="text-right">
+            <span
+              class="inline-block bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-sm"
+              >Everyday</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="message-card bg-white rounded-2xl p-6 shadow-md relative overflow-hidden"
+        >
+          <div
+            class="absolute -top-4 -right-4 text-pink-400 text-5xl opacity-20"
+          >
+            <i class="fas fa-heart"></i>
+          </div>
+          <h2 class="text-xl font-semibold text-pink-600 mb-3">Strength</h2>
+          <p class="text-gray-700 mb-4">
+            Ketika dunia terasa berat, lihatlah ke dalam dirimu. Kau lebih kuat
+            dari yang bubyyy kira, dan aku selalu di sini untuk mendukungmu.
+          </p>
+          <div class="text-right">
+            <span
+              class="inline-block bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm"
+              >Always</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="message-card bg-white rounded-2xl p-6 shadow-md relative overflow-hidden"
+        >
+          <div
+            class="absolute -top-4 -right-4 text-pink-400 text-5xl opacity-20"
+          >
+            <i class="fas fa-heart"></i>
+          </div>
+          <h2 class="text-xl font-semibold text-pink-600 mb-3">
+            Beautiful Soul
+          </h2>
+          <p class="text-gray-700 mb-4">
+            Bukan hanya cantik luar, tapi juga hati dan jiwamu yang penuh
+            kebaikan membuatku semakin jatuh cinta setiap harinya. hehe akuu
+            sayangg bubyy banyaaaaaaaaaaaaaaaaaaaaaak banyakkkkkkk, aku buat ini
+            karena masih ada sedikit baterai di laptokku, habis bikin ppt buat
+            sempro, doain lancar ya bubyyy, semproku, maupun CINTA kita agar
+            langgeng terusss muachhh.
+          </p>
+          <div class="text-right">
+            <span
+              class="inline-block bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm"
+              >Forever</span
+            >
+          </div>
+        </div>
+
+        <!-- Interactive Elements -->
+        <div
+          class="md:col-span-2 lg:col-span-3 flex flex-col items-center justify-center my-8"
+        >
+          <button
+            id="loveBtn"
+            class="love-btn bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center"
+          >
+            <i class="fas fa-heart mr-2"></i> Click for a Special Message
+          </button>
+          <div class="hidden-message mt-6 text-center">
+            <p class="text-xl text-pink-600 font-medium">
+              Aku bersyukur setiap hari bisa memilikimu, SAYANGKU CINTAA, jangan
+              pernah pergi apalagi ngejauhin aku. Terima kasih telah menjadi
+              cahaya dan warna warni didalam gelapnya hidupku.
+            </p>
+            <div class="mt-4 flex justify-center space-x-2">
+              <i
+                class="fas fa-heart text-red-500 heart-float text-4xl"
+                style="animation-delay: 0s"
+              ></i>
+              <i
+                class="fas fa-heart text-red-500 heart-float text-4xl"
+                style="animation-delay: 0.5s"
+              ></i>
+              <i
+                class="fas fa-heart text-red-500 heart-float text-4xl"
+                style="animation-delay: 1s"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="md:col-span-2 lg:col-span-3">
+          <h2 class="text-2xl font-bold text-center text-pink-600 mb-6">
+            Our Beautiful Memories
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="overflow-hidden rounded-lg shadow-md">
+              <img
+                src="image2.jpg"
+                alt="Momen kebersamaan romantis di pantai saat matahari terbenam"
+                class="w-full h-48 object-cover hover:scale-105 transition duration-300"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md">
+              <img
+                src="image3.jpg"
+                alt="Saat istimewa berdua di restoran dengan dekorasi lilin"
+                class="w-full h-48 object-cover hover:scale-105 transition duration-300"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md">
+              <img
+                src="image4.jpg"
+                alt="Kenangan bahagia di taman bermain dengan latar pepohonan"
+                class="w-full h-48 object-cover hover:scale-105 transition duration-300"
+              />
+            </div>
+            <div class="overflow-hidden rounded-lg shadow-md">
+              <img
+                src="image5.jpg"
+                alt="Detail tangan berpegangan dengan latar pemandangan indah"
+                class="w-full h-48 object-cover hover:scale-105 transition duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="text-center mt-16 pb-8 text-gray-500">
+        <p>
+          Made with <i class="fas fa-heart text-red-500"></i> for Ayu Ristayanti
+        </p>
+        <p class="text-sm mt-2">Every moment with you is a precious gift</p>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById("loveBtn").addEventListener("click", function () {
+        const messages = [
+          "Kamu adalah mimpi yang menjadi nyata dalam hidupku my litte girl",
+          "Dunia menjadi lebih indah karena ada kamu di dalamnya",
+          "Setiap detik bersamamu adalah harta karun yang tak ternilai kiwwkiwww",
+          "Aku jatuh cinta padamu setiap hari ingatt ituu setiap hari jam detik maupun menit",
+          "Kamu sempurna dengan segala kelebihan dan kekuranganmu aseek ILOVEEYOUUUU",
+        ];
+
+        const randomMessage =
+          messages[Math.floor(Math.random() * messages.length)];
+        document.querySelector(".hidden-message p").textContent = randomMessage;
+
+        document.querySelector(".hidden-message").style.opacity = "1";
+
+        const heartsContainer = document.createElement("div");
+        heartsContainer.className = "absolute inset-0 pointer-events-none";
+
+        for (let i = 0; i < 10; i++) {
+          const heart = document.createElement("i");
+          heart.className = "fas fa-heart text-red-500 absolute";
+          heart.style.left = Math.random() * 100 + "vw";
+          heart.style.top = Math.random() * 100 + "vh";
+          heart.style.fontSize = Math.random() * 20 + 10 + "px";
+          heart.style.animation = `float ${
+            Math.random() * 3 + 2
+          }s ease-in-out infinite`;
+          heart.style.animationDelay = Math.random() * 2 + "s";
+          heartsContainer.appendChild(heart);
+        }
+
+        document.body.appendChild(heartsContainer);
+        setTimeout(() => {
+          document.body.removeChild(heartsContainer);
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>
